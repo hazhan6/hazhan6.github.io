@@ -1,0 +1,13 @@
+.scrollButton {
+  position: fixed;
+  bottom: 40px;
+  right: 15px;
+  color: var(--bg-color);
+  padding: 0.2rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid var(--text-color);
+  border-radius: 20px;
+}

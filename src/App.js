@@ -5,6 +5,7 @@ import Works from "./views/Works";
 import Contact from "./views/Contact";
 import Footer from "./views/Footer";
 import About from "./views/About";
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Works />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
