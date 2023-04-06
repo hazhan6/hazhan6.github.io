@@ -159,7 +159,7 @@ export default function NavBar() {
       <div className="container flex-column">
         <ul
           id="navbarToggleCollapse"
-          className="deneme navbar-nav collapse navbar-collapse mr-auto h4 align-items-start gap-3"
+          className="navbar-toggle-ul navbar-nav collapse navbar-collapse mr-auto h4 align-items-start gap-3"
         >
           {navbarItems.map((item, index) => (
             <a className="navbar-items" key={index} href={item.href}>
@@ -167,7 +167,7 @@ export default function NavBar() {
               <span className="ms-3 hide">{item.name} </span>
             </a>
           ))}
-          <li style={{ paddingTop: 11 }}>
+          <li>
             <button
               onClick={toggleTheme}
               type="button"

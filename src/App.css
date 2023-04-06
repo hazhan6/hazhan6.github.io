@@ -30,7 +30,7 @@
 }
 
 @media (min-width: 768px) {
-  .deneme {
+  .navbar-toggle-ul {
     display: flex !important;
     flex-direction: column !important;
   }
