@@ -55,16 +55,17 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="container d-flex my-5 py-5 align-items-center text-center flex-column gap-5"
+      className="container d-flex align-items-center text-center flex-column gap-5"
+      style={{ paddingTop: "10%" }}
     >
-      <h1 className="py-5">HEY, I'M HAZAL HANGUL</h1>
+      <h1>HEY, I'M HAZAL HANGUL</h1>
       <h2>Frontend / Mobile Developer</h2>
       <h5>
         A Frontend focused Web Developer building the Frontend of Websites and
         <br />
         Web Applications that leads to the success of the overall product
       </h5>
-      <div className="d-flex flex-md-row flex-column justify-content-around w-50">
+      <div className="d-flex justify-content-around w-50">
         {channels.map((channel, index) => (
           <div className="mr-2 mb-3" key={index}>
             <a href={channel.href} target="_blank" rel="noreferrer">
