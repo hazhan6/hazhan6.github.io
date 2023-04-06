@@ -12,8 +12,8 @@ export default function NavBar() {
         ? setThemeMode("light-theme")
         : setThemeMode("dark-theme");
     } else {
-      setThemeMode("light-theme");
-      localStorage.setItem("theme", "light-theme");
+      setThemeMode("dark-theme");
+      localStorage.setItem("theme", "dark-theme");
     }
   }, []);
 
