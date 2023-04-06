@@ -34,7 +34,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="d-flex my-5 py-5 p-3 justify-content-center align-items-center text-center gap-5"
+      className="container min-vh-100 d-flex justify-content-center align-items-center text-center gap-5"
     >
       <div>
         <h1 className="mb-3">Contact me</h1>

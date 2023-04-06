@@ -55,8 +55,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="container d-flex align-items-center text-center flex-column gap-5"
-      style={{ paddingTop: "10%" }}
+      className="container min-vh-100 d-flex flex-column justify-content-center align-items-center text-center gap-5"
     >
       <h1>HEY, I'M HAZAL HANGUL</h1>
       <h2>Frontend / Mobile Developer</h2>
