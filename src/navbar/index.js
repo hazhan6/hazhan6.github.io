@@ -5,6 +5,8 @@ export default function NavBar() {
   const [themeMode, setThemeMode] = useState("dark-theme");
   const [changeMode, setChangeMode] = useState(false);
 
+  const [openMenu, setOpenMenu] = useState(false);
+
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme) {
@@ -26,11 +28,102 @@ export default function NavBar() {
       setThemeMode("light-theme");
       localStorage.setItem("theme", "light-theme");
     }
+    handleExpandNavClick();
   };
 
   useEffect(() => {
     document.body.className = themeMode;
   }, [themeMode]);
+
+  const handleExpandNavClick = () => {
+    setOpenMenu(!openMenu);
+  };
+
+  const ExpandNav = () => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        fill="currentColor"
+        className="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fillRule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+      </svg>
+    );
+  };
+
+  const navbarItems = [
+    {
+      name: "Home",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          className="bi bi-house"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+        </svg>
+      ),
+      href: "#home",
+    },
+    {
+      name: "About",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          className="bi bi-person"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+        </svg>
+      ),
+      href: "#about",
+    },
+    {
+      name: "Works",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          className="bi bi-card-list"
+          viewBox="0 0 16 16"
+        >
+          <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+          <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+        </svg>
+      ),
+      href: "#works",
+    },
+    {
+      name: "Contact",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          className="bi bi-person-lines-fill"
+          viewBox="0 0 16 16"
+        >
+          <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+        </svg>
+      ),
+      href: "#contact",
+    },
+  ];
 
   const Toggle = () => {
     return (
@@ -64,64 +157,52 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm">
-      <div
-        className="container"
-        style={{ padding: "1%", borderBottom: "1px solid gray" }}
-      >
-        <a className="navbar-brand" href="#home">
-          <img
-            alt=""
-            src={
-              themeMode === "light-theme"
-                ? "/images/hh-logo-dark.png"
-                : "/images/hh-logo-light.png"
-            }
-            width="80"
-            height="100%"
-            className="d-inline-block "
-          />
-        </a>
-        <button
-          style={{
-            color: themeMode === "dark-theme" && "#111b20",
-            backgroundColor: themeMode === "dark-theme" && "#f2f2f2",
-          }}
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggleCollapse"
-          aria-controls="navbarToggleCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
+    <nav className="navbar h-100">
+      <div className="hamburger">
+        <button className="hamburger-button" onClick={handleExpandNavClick}>
+          <ExpandNav />
         </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarToggleCollapse"
-        >
-          <ul className="navbar-nav mr-auto h4 align-items-center gap-5">
-            <a className="navbar-items" href="#home">
-              ABOUT
-            </a>
-            <a className="navbar-items" href="#works">
-              WORK
-            </a>
-            <a className="navbar-items" href="#contact">
-              CONTACT
-            </a>
-            <li>
-              <button
-                onClick={toggleTheme}
-                type="button"
-                className="btn bg-transparent border-0 no-border"
+        {openMenu && (
+          <ul className="hamburger-items">
+            {navbarItems.map((item, index) => (
+              <a
+                className="hamburger-item"
+                key={index + 5}
+                href={item.href}
+                onClick={handleExpandNavClick}
               >
-                <Toggle />
-              </button>
-            </li>
+                {item.icon}
+                <span className="ms-3">{item.name} </span>
+              </a>
+            ))}
+            <button
+              onClick={toggleTheme}
+              type="button"
+              className="hamburger-toogle btn bg-transparent border-0 no-border"
+            >
+              <Toggle />
+            </button>
           </ul>
-        </div>
+        )}
+      </div>
+      <div className="container flex-column">
+        <ul className="navbar-nav mr-auto h4 align-items-start gap-5">
+          {navbarItems.map((item, index) => (
+            <a className="navbar-items" key={index} href={item.href}>
+              {item.icon}
+              <span className="ms-3 hide">{item.name} </span>
+            </a>
+          ))}
+          <li style={{ paddingTop: 11 }}>
+            <button
+              onClick={toggleTheme}
+              type="button"
+              className=" px-4 btn bg-transparent border-0 no-border"
+            >
+              <Toggle />
+            </button>
+          </li>
+        </ul>
       </div>
     </nav>
   );

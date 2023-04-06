@@ -11,6 +11,7 @@
   --btn-text-clr: #f2f2f2;
   --bg-clr: #111b20;
   --text-color: #f2f2f2;
+  --nav-bg-color: #eab508;
 }
 
 .light-theme {
@@ -20,17 +21,127 @@
   --btn-text-clr: #f2f2f2;
   --bg-clr: #fff;
   --text-color: #111b20;
+  --nav-bg-color: #111b20;
 }
 
-.navbar-items {
-  color: var(--text-color);
+.navbar {
+  position: fixed !important;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    position: sticky !important;
+    position: -webkit-sticky !important;
+  }
+
+  .navbar-parent {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+
+  .navbar-nav {
+    display: none !important;
+  }
 }
 
 .navbar-items:link,
-.navbar-items:visited,
-.navbar-items:hover {
-  color: var(--text-color);
+.navbar-items:visited {
   text-decoration: none;
+}
+
+@media (min-width: 750px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+.hamburger-button {
+  position: absolute;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.hamburger-items {
+  margin-top: 5rem;
+}
+
+.hamburger-item:link,
+.hamburger-item:visited {
+  text-decoration: none;
+}
+
+.hamburger-item {
+  display: flex;
+  padding: 1em 0.5em;
+  color: var(--text-color) !important;
+}
+
+.hamburger-toogle {
+  padding: 1em 0.5em !important;
+}
+
+.bi-list {
+  color: var(--text-color) !important;
+}
+
+.navbar-items {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: var(--text-color);
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.navbar-items::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--nav-bg-color);
+  transition: 0.5s ease;
+}
+
+.navbar-items:hover {
+  color: var(--bg-clr);
+  transition-delay: 0.5s;
+}
+
+.navbar-items:hover::before {
+  width: 100%;
+}
+
+.navbar-items::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: var(--nav-bg-color);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.navbar-items:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+.hide {
+  display: none;
+}
+.navbar-items:hover .hide {
+  display: initial;
 }
 
 .btn-home {

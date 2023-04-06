@@ -8,11 +8,17 @@ import Footer from "./views/Footer";
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Home />
-      <Works />
-      <Contact />
-      <Footer />
+      <div className="d-flex row">
+        <div className="col-md-1 navbar-parent">
+          <NavBar />
+        </div>
+        <div className="col-md-11">
+          <Home />
+          <Works />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
