@@ -32,7 +32,10 @@ function Contact() {
   }
 
   return (
-    <div className="d-flex mt-5 pt-5 p-3 justify-content-center align-items-center text-center gap-5">
+    <section
+      id="contact"
+      className="d-flex my-5 py-5 p-3 justify-content-center align-items-center text-center gap-5"
+    >
       <div>
         <h1 className="mb-3">Contact me</h1>
         <h5 className="mb-5">
@@ -48,7 +51,7 @@ function Contact() {
               name="entry.446545002"
               onChange={handleInputData("entry.446545002")}
               value={formData["entry.446545002"]}
-              autoComplete={false}
+              autoComplete="false"
             />
           </div>
           <div className="mb-3">
@@ -60,7 +63,7 @@ function Contact() {
               name="entry.548240817"
               onChange={handleInputData("entry.548240817")}
               value={formData["entry.548240817"]}
-              autoComplete={false}
+              autoComplete="false"
             />
           </div>
           <div className="mb-3">
@@ -73,7 +76,7 @@ function Contact() {
               name="entry.248765395"
               onChange={handleInputData("entry.248765395")}
               value={formData["entry.248765395"]}
-              autoComplete={false}
+              autoComplete="false"
             />
           </div>
           <button className="btn btn-home w-100" type="submit">
@@ -81,7 +84,7 @@ function Contact() {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -34,16 +34,16 @@
 }
 
 .btn-home {
-  color: var(--bg-clr) !important;
-  background-color: var(--text-color) !important;
-  border: solid var(--text-color) !important;
   font-weight: 500 !important;
-}
-
-.btn-home:hover {
   border: solid var(--text-color) !important;
   background-color: var(--bg-clr) !important;
   color: var(--text-color) !important;
+}
+
+.btn-home:hover {
+  color: var(--bg-clr) !important;
+  background-color: var(--text-color) !important;
+  border: solid var(--text-color) !important;
 }
 
 .btn-channel,

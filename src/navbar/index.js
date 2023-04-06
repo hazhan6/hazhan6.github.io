@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/js/src/collapse.js";
-import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [themeMode, setThemeMode] = useState("dark-theme");
@@ -65,12 +64,12 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light">
+    <nav className="navbar navbar-expand-sm">
       <div
         className="container"
         style={{ padding: "1%", borderBottom: "1px solid gray" }}
       >
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#home">
           <img
             alt=""
             src={
@@ -82,7 +81,7 @@ export default function NavBar() {
             height="100%"
             className="d-inline-block "
           />
-        </Link>
+        </a>
         <button
           style={{
             color: themeMode === "dark-theme" && "#111b20",
@@ -103,15 +102,15 @@ export default function NavBar() {
           id="navbarToggleCollapse"
         >
           <ul className="navbar-nav mr-auto h4 align-items-center gap-5">
-            <Link className="navbar-items" to="/">
-              HOME
-            </Link>
-            <Link className="navbar-items" to="works">
+            <a className="navbar-items" href="#home">
+              ABOUT
+            </a>
+            <a className="navbar-items" href="#works">
               WORK
-            </Link>
-            <Link className="navbar-items" to="contact">
+            </a>
+            <a className="navbar-items" href="#contact">
               CONTACT
-            </Link>
+            </a>
             <li>
               <button
                 onClick={toggleTheme}
