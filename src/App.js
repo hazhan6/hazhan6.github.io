@@ -6,17 +6,36 @@ import Contact from "./views/Contact";
 import Footer from "./views/Footer";
 import About from "./views/About";
 import ScrollToTop from "./components/scrollToTop";
+import { useEffect, useState } from "react";
+import Loader from "./views/loader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleLoading = () => {
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("load", handleLoading);
+    return () => window.removeEventListener("load", handleLoading);
+  }, []);
+
   return (
     <div className="App">
-      <NavBar />
-      <Home />
-      <About />
-      <Works />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
+      {!isLoading ? (
+        <div>
+          <NavBar />
+          <Home />
+          <About />
+          <Works />
+          <Contact />
+          <Footer />
+          <ScrollToTop />
+        </div>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 }
