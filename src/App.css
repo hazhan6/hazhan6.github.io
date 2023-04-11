@@ -16,6 +16,14 @@
   --nav-bg-color: #111b20;
 }
 
+.logo-text {
+  fill: var(--text-color);
+}
+
+.logo-stroke {
+  stroke: var(--text-color);
+}
+
 .navbar {
   position: fixed !important;
 }
