@@ -1,4 +1,5 @@
 import React from "react";
+import "./home.css";
 
 const channels = [
   {
@@ -57,8 +58,18 @@ const Home = () => {
       <div className="row w-100">
         <div className="col-sm-8 d-flex flex-column justify-content-center text-center align-items-center">
           <div className="d-flex flex-column align-items-center gap-5">
-            <h1>HEY, I'M HAZAL HANGUL</h1>
-            <h2>Frontend / Mobile Developer</h2>
+            <div className="d-flex flex-column d-md-none">
+              <h1>HEY, I'M HAZAL HANGUL</h1>
+              <h2>Frontend / Mobile Developer</h2>
+            </div>
+            <div className="slider-wrapper d-md-flex d-none">
+              <h1>HEY, I'M HAZAL HANGUL</h1>
+              <div className="slider">
+                <div className="slider-text1">Frontend Developer</div>
+                <div className="slider-text2">Mobile Developer</div>
+                <div className="slider-text3">Software Developer</div>
+              </div>
+            </div>
             <div className="d-flex justify-content-between w-50">
               {channels.map((channel, index) => (
                 <div className="mr-2 mb-3" key={index}>
