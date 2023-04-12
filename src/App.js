@@ -8,6 +8,10 @@ import About from "./views/About";
 import ScrollToTop from "./components/scrollToTop";
 import { useEffect, useState } from "react";
 import Loader from "./views/loader";
+import AOS from "aos/dist/aos";
+import "aos/dist/aos.css";
+
+AOS.init({ once: true });
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);

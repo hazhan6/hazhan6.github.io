@@ -67,7 +67,7 @@ const Home = () => {
               <div className="slider">
                 <div className="slider-text1">Frontend Developer</div>
                 <div className="slider-text2">Mobile Developer</div>
-                <div className="slider-text3">Software Developer</div>
+                <div className="slider-text3">React Developer</div>
               </div>
             </div>
             <div className="d-flex justify-content-between w-50">

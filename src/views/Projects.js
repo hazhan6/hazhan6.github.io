@@ -5,19 +5,18 @@ const projects = [
   {
     title: "Blog",
     description:
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam",
+      " Built with HTML, JS, React, Redux, Tailwind-CSS. Also used react-dom-router, React-Hooks, API Calls.",
     img: "./images/blog.svg",
   },
   {
     title: "Weather App",
     description:
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam",
+      " Designed with HTML, CSS, JS, React/Redux . Used OpenWeatherMap's API.",
     img: "./images/weather.svg",
   },
   {
     title: "Social Media App",
-    description:
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam",
+    description: "MERN Stack Social Media Application. Design with Bootstrap.",
     img: "./images/social-media.svg",
   },
 ];
