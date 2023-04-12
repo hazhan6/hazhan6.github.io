@@ -83,8 +83,8 @@ const Home = () => {
         </div>
         <div className="col-sm-4 pb-5 d-sm-flex align-items-center d-none">
           <svg
-            width="375"
-            height="344"
+            width="275"
+            height="244"
             viewBox="0 0 175 144"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

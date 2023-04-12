@@ -1,7 +1,7 @@
 import "./App.css";
 import NavBar from "./navbar";
 import Home from "./views/Home";
-import Works from "./views/Works";
+import Projects from "./views/Projects";
 import Contact from "./views/Contact";
 import Footer from "./views/Footer";
 import About from "./views/About";
@@ -28,7 +28,7 @@ function App() {
           <NavBar />
           <Home />
           <About />
-          <Works />
+          <Projects />
           <Contact />
           <Footer />
           <ScrollToTop />

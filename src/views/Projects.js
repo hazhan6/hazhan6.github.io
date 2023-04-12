@@ -1,7 +1,7 @@
 import React from "react";
-import "./works.css";
+import "./projects.css";
 
-const works = [
+const projects = [
   {
     title: "Blog",
     description:
@@ -22,15 +22,15 @@ const works = [
   },
 ];
 
-const Works = () => {
+const Projects = () => {
   return (
     <section
-      id="works"
+      id="projects"
       className="container min-vh-100 d-flex flex-column justify-content-center align-items-center text-center gap-5"
     >
-      <h1>Works</h1>
+      <h1>Projects</h1>
       <div className="d-flex justify-content-around gap-5 row w-75">
-        {works.map((work) => (
+        {projects.map((work) => (
           <div class="card col-md-4 col-12">
             <div
               class="card-info"
@@ -52,4 +52,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default Projects;
