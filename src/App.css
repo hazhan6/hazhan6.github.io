@@ -5,37 +5,119 @@
 }
 
 .dark-theme {
-  --main-heading: #5f99be;
-  --para-clr: #f2f2f2;
-  --btn-bg-color: #5f99be;
-  --btn-text-clr: #f2f2f2;
   --bg-clr: #111b20;
   --text-color: #f2f2f2;
+  --nav-bg-color: #eab508;
 }
 
 .light-theme {
-  --main-heading: #5f99be;
-  --para-clr: #333;
-  --btn-bg-color: #111b20;
-  --btn-text-clr: #f2f2f2;
-  --bg-clr: #fff;
+  --bg-clr: #f2f2f2;
   --text-color: #111b20;
+  --nav-bg-color: #111b20;
 }
 
-.navbar-items {
+.logo-text {
+  fill: var(--text-color);
+}
+
+.logo-stroke {
+  stroke: var(--text-color);
+}
+
+.navbar {
+  position: fixed !important;
+}
+
+.bi-list {
   color: var(--text-color);
+}
+
+.navbar-toggler {
+  color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle-ul {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 767.5px) {
+  .navbar {
+    position: sticky !important;
+    position: -webkit-sticky !important;
+  }
 }
 
 .navbar-items:link,
-.navbar-items:visited,
-.navbar-items:hover {
-  color: var(--text-color);
+.navbar-items:visited {
   text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar-items {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: var(--text-color);
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .hide {
+    display: none;
+  }
+  .navbar-items:hover .hide {
+    display: initial;
+  }
+
+  .navbar-items::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-bg-color);
+    transition: 0.5s ease;
+  }
+
+  .navbar-items:hover {
+    color: var(--bg-clr);
+    transition-delay: 0.5s;
+  }
+
+  .navbar-items:hover::before {
+    width: 100%;
+  }
+
+  .navbar-items::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: var(--nav-bg-color);
+    transition: 0.4s ease;
+    z-index: -1;
+  }
+
+  .navbar-items:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }
 }
 
 .btn-home {
   font-weight: 500 !important;
-  border: solid var(--text-color) !important;
+  border: 2px solid var(--text-color) !important;
   background-color: var(--bg-clr) !important;
   color: var(--text-color) !important;
 }
@@ -43,7 +125,7 @@
 .btn-home:hover {
   color: var(--bg-clr) !important;
   background-color: var(--text-color) !important;
-  border: solid var(--text-color) !important;
+  border: 2px solid var(--text-color) !important;
 }
 
 .btn-channel,
