@@ -54,33 +54,31 @@ const channels = [
 
 const Home = () => {
   return (
-    <section id="home" className=" container min-vh-100 d-flex flex-row">
-      <div style={{ paddingBottom: "40%" }} className="row w-100 pb-md-0">
-        <div className="col-sm-8 d-flex flex-column justify-content-center text-center align-items-center">
-          <div className="d-flex flex-column align-items-center gap-5">
-            <div className="slider-wrapper gap-4">
-              <h1>HEY, I'M HAZAL HANGUL</h1>
-              <div className="slider">
-                <div className="slider-text1">Frontend Developer</div>
-                <div className="slider-text2">Mobile Developer</div>
-                <div className="slider-text3">React Developer</div>
-              </div>
+    <section id="home" className=" min-vh-100 d-flex justify-content-center">
+      <div className="row w-100">
+        <div className="col-sm-8 d-flex flex-column justify-content-center align-items-center gap-5">
+          <div className="slider-wrapper gap-4">
+            <h1>HEY, I'M HAZAL HANGUL</h1>
+            <div className="slider">
+              <div className="slider-text1">Frontend Developer</div>
+              <div className="slider-text2">Mobile Developer</div>
+              <div className="slider-text3">React Developer</div>
             </div>
-            <div className="d-flex justify-content-between w-50">
-              {channels.map((channel, index) => (
-                <div className="mr-2 mb-3" key={index}>
-                  <a href={channel.href} target="_blank" rel="noreferrer">
-                    <div className="btn-channel">{channel.icon}</div>
-                  </a>
-                </div>
-              ))}
-            </div>
-            <a className="btn btn-home w-25" href="#contact">
-              <span>Resume</span>
-            </a>
           </div>
+          <div className="d-flex gap-5">
+            {channels.map((channel, index) => (
+              <div key={index}>
+                <a href={channel.href} target="_blank" rel="noreferrer">
+                  <div className="btn-channel">{channel.icon}</div>
+                </a>
+              </div>
+            ))}
+          </div>
+          <a className="btn btn-home" href="#contact">
+            <span>Resume</span>
+          </a>
         </div>
-        <div className="col-sm-4 pb-5 d-sm-flex align-items-center d-none">
+        <div className="col-sm-4 d-sm-flex align-items-center d-none">
           <svg
             width="275"
             height="244"
