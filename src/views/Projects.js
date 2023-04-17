@@ -27,22 +27,23 @@ const Projects = () => {
       id="projects"
       className="container min-vh-100 d-flex flex-column justify-content-center align-items-center text-center gap-5"
     >
-      <h1>Projects</h1>
+      <div className="projects-text">
+        <h2>Projects</h2>
+      </div>
       <div className="d-flex justify-content-around gap-5 row w-75">
-        {projects.map((work) => (
-          <div class="card col-md-4 col-12">
+        {projects.map((work, index) => (
+          <div key={index} className="card col-md-4 col-12">
             <div
-              class="card-info"
+              className="card-info"
               style={{
-                backgroundPositionY: "center",
-                backgroundPositionX: "center",
+                backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "contain",
                 backgroundImage: `url(${work?.img})`,
               }}
             >
-              <p class="title">{work.title} </p>
-              <p class="description">{work.description} </p>
+              <p className="title">{work.title} </p>
+              <p className="description">{work.description} </p>
             </div>
           </div>
         ))}

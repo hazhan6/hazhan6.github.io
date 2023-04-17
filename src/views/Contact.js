@@ -20,6 +20,11 @@ function Contact() {
   async function onSubmit(e) {
     e.preventDefault();
     setSubmit(true);
+    setFormData({
+      "entry.446545002": "",
+      "entry.548240817": "",
+      "entry.248765395": "",
+    });
 
     let url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSf9T_J1YxZVObyA2D_7PdffgctikOziyUgg0_UcU5vB7E-I3w/formResponse?entry.446545002=${formData["entry.446545002"]}&entry.548240817=${formData["entry.548240817"]}&entry.248765395=${formData["entry.248765395"]}`;
 
@@ -79,7 +84,11 @@ function Contact() {
               autoComplete="false"
             />
           </div>
-          <button className="btn btn-home w-100" type="submit">
+          <button
+            className="btn btn-home w-100"
+            type="submit"
+            disabled={submit}
+          >
             <span>{submit ? "Thanks, I'll get back to you soon" : "Send"}</span>
           </button>
         </form>

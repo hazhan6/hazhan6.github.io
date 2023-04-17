@@ -1,5 +1,5 @@
 .slider-wrapper {
-  font-size: 40px;
+  font-size: x-large;
   color: var(--text-clr);
   font-weight: bold;
   display: flex;
@@ -7,6 +7,19 @@
   justify-content: center;
   flex-direction: column;
 }
+
+@media (min-width: 908px) {
+  .slider-wrapper {
+    font-size: xx-large;
+  }
+}
+
+@media (max-width: 335px) {
+  .slider-wrapper {
+    font-size: large;
+  }
+}
+
 .slider {
   height: 60px;
   padding-left: 15px;

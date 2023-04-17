@@ -1,3 +1,14 @@
+.projects-text {
+  border: 1px solid var(--nav-bg-color);
+  padding-inline: 10px;
+  color: var(--nav-bg-color);
+}
+
+.projects-text:hover {
+  transform: scale(1.2);
+  cursor: default;
+}
+
 .card {
   --background: linear-gradient(
     to left,
@@ -42,7 +53,7 @@
 }
 
 .card .title {
-  padding-top: 5%;
+  padding-top: 3%;
   color: var(--nav-bg-color);
   font-weight: bold;
   letter-spacing: 0.1em;

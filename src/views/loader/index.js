@@ -4,7 +4,7 @@ import "./loader.css";
 const Loader = () => {
   return (
     <div className="wrapper-spinner">
-      <div class="loader" />
+      <div className="loader" />
     </div>
   );
 };

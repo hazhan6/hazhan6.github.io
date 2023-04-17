@@ -55,14 +55,10 @@ const channels = [
 const Home = () => {
   return (
     <section id="home" className=" container min-vh-100 d-flex flex-row">
-      <div className="row w-100">
+      <div style={{ paddingBottom: "40%" }} className="row w-100 pb-md-0">
         <div className="col-sm-8 d-flex flex-column justify-content-center text-center align-items-center">
           <div className="d-flex flex-column align-items-center gap-5">
-            <div className="d-flex flex-column d-md-none">
-              <h1>HEY, I'M HAZAL HANGUL</h1>
-              <h2>Frontend / Mobile Developer</h2>
-            </div>
-            <div className="slider-wrapper d-md-flex d-none">
+            <div className="slider-wrapper gap-4">
               <h1>HEY, I'M HAZAL HANGUL</h1>
               <div className="slider">
                 <div className="slider-text1">Frontend Developer</div>
@@ -79,6 +75,9 @@ const Home = () => {
                 </div>
               ))}
             </div>
+            <a className="btn btn-home w-25" href="#contact">
+              <span>Resume</span>
+            </a>
           </div>
         </div>
         <div className="col-sm-4 pb-5 d-sm-flex align-items-center d-none">
@@ -96,7 +95,7 @@ const Home = () => {
             <path
               d="M52 23V3H172V141H52V125"
               className="logo-stroke"
-              stroke-width="5"
+              strokeWidth="5"
             />
           </svg>
         </div>
